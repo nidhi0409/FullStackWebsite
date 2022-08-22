@@ -12,19 +12,20 @@
 </head>
 <body>
 	<div class="nav-container">
-		<div class="nav-item"><a href="#">Home</a></div>
-		<div class="nav-item"><a href="#">Contact</a></div>
-		<div class="nav-item"><a href="#">About</a></div>
-		<div class="nav-item"><a href="#">Products</a></div>
-		<button class="button">Login/SignUp</button>
+		<div class="nav-item"><a href="#home">Home</a></div>
+		<div class="nav-item"><a href="#contact">Contact</a></div>
+		<div class="nav-item"><a href="#about">About</a></div>
+		<div class="nav-item"><a href="#products">Products</a></div>
+		<button class="button"><a href="loginform.html">Login/SignUp</a></button>
 	</div>
-	<div class="hero-section"> 
+	
+	<div class="hero-section" id="home"> 
 		<h1>The Books Loft </h1>
 		<h2>Take a look. Read a book!</h2>
 		<button class="hero-button">Learn More...</button>
 	</div>
 
-	<div class="grid-header">Products</div>
+	<div class="grid-header" id="products">Products</div>
 	<div class="grid-container">
 		<div class="grid-items">
 			<img src="images/1.jpg">
@@ -58,7 +59,7 @@
 	</div>
 
 
-<div class="about-section">
+<div class="about-section" id="about">
   <h1>About Us</h1><br>
             The Books Loft was born in 2022 as a publishing consultant company, a first of its kind in India.
                         With a strong focus on strategy, marketing and communication for the publishing sector, The Books Loft became widely known due to its TheBooksLoft.com website. After just a few time, the site turned into a newsletter, averaging 3,000 weekly viewers. The Books Loft aimed at keeping the Worldwide professional market informed by editing and publishing important works such as<em> Book Publishing and Strategic Management</em>, by Nidhi Chauhan, and since 2022 &ldquo;Publishing Personalities&rdquo;
@@ -136,7 +137,7 @@
    </section>
 
 
-	<div class="last-container">
+	<div class="last-container" id="contact">
 	<div class="contact-container">
 		<h1 >Contact Us</h1><br>
 		<i class="fa fa-code" style="font-size:24px"></i>
@@ -156,6 +157,30 @@
           <p>The Books Loft © 2022</p>
     </div>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
 	
 </body>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 </html>
